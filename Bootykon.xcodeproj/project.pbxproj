@@ -1,0 +1,386 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD17673F1F6614900024C550 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD17673E1F6614900024C550 /* AppDelegate.m */; };
+		CD1767421F6614900024C550 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1767411F6614900024C550 /* main.m */; };
+		CD1767451F6614900024C550 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1767441F6614900024C550 /* ViewController.m */; };
+		CD1767471F6614900024C550 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD1767461F6614900024C550 /* Assets.xcassets */; };
+		CD17674A1F6614900024C550 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1767481F6614900024C550 /* Main.storyboard */; };
+		CD1767FC1F6614FF0024C550 /* JukeBox.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1767531F6614FF0024C550 /* JukeBox.m */; };
+		CD17689A1F6614FF0024C550 /* bootykon_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD1767F91F6614FF0024C550 /* bootykon_background.jpg */; };
+		CD17689B1F6614FF0024C550 /* bootykon.icns in Resources */ = {isa = PBXBuildFile; fileRef = CD1767FA1F6614FF0024C550 /* bootykon.icns */; };
+		CD17689E1F6615770024C550 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD17689D1F6615770024C550 /* AVFoundation.framework */; };
+		CD1769E31F66162A0024C550 /* Audio in Resources */ = {isa = PBXBuildFile; fileRef = CD1769E21F66162A0024C550 /* Audio */; };
+		CD1769E61F6621B90024C550 /* InstructionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1769E51F6621B90024C550 /* InstructionSet.m */; };
+		CD1769E91F6621D70024C550 /* MusicInstructionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1769E81F6621D70024C550 /* MusicInstructionSet.m */; };
+		CD1769EC1F6621EA0024C550 /* CountingInstructionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1769EB1F6621EA0024C550 /* CountingInstructionSet.m */; };
+		CD1769F11F6668F10024C550 /* Section.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1769F01F6668F10024C550 /* Section.m */; };
+		CD1769F41F666A890024C550 /* MeditationInstructionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1769F31F666A890024C550 /* MeditationInstructionSet.m */; };
+		CD1769F71F666B380024C550 /* YogaInstructionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1769F61F666B380024C550 /* YogaInstructionSet.m */; };
+		CD1769FA1F666BF40024C550 /* BudoInstructionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1769F91F666BF40024C550 /* BudoInstructionSet.m */; };
+		CD1769FD1F666C210024C550 /* EndingInstructionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1769FC1F666C210024C550 /* EndingInstructionSet.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CD17673A1F6614900024C550 /* Bootykon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bootykon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD17673D1F6614900024C550 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CD17673E1F6614900024C550 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CD1767411F6614900024C550 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CD1767431F6614900024C550 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CD1767441F6614900024C550 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CD1767461F6614900024C550 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD1767491F6614900024C550 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CD17674B1F6614900024C550 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD1767531F6614FF0024C550 /* JukeBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JukeBox.m; sourceTree = "<group>"; };
+		CD1767541F6614FF0024C550 /* JukeBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JukeBox.h; sourceTree = "<group>"; };
+		CD1767F91F6614FF0024C550 /* bootykon_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bootykon_background.jpg; sourceTree = "<group>"; };
+		CD1767FA1F6614FF0024C550 /* bootykon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = bootykon.icns; sourceTree = "<group>"; };
+		CD17689D1F6615770024C550 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		CD1769E21F66162A0024C550 /* Audio */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Audio; sourceTree = "<group>"; };
+		CD1769E41F6621B90024C550 /* InstructionSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstructionSet.h; sourceTree = "<group>"; };
+		CD1769E51F6621B90024C550 /* InstructionSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstructionSet.m; sourceTree = "<group>"; };
+		CD1769E71F6621D70024C550 /* MusicInstructionSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicInstructionSet.h; sourceTree = "<group>"; };
+		CD1769E81F6621D70024C550 /* MusicInstructionSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicInstructionSet.m; sourceTree = "<group>"; };
+		CD1769EA1F6621EA0024C550 /* CountingInstructionSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountingInstructionSet.h; sourceTree = "<group>"; };
+		CD1769EB1F6621EA0024C550 /* CountingInstructionSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountingInstructionSet.m; sourceTree = "<group>"; };
+		CD1769EF1F6668F10024C550 /* Section.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Section.h; sourceTree = "<group>"; };
+		CD1769F01F6668F10024C550 /* Section.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Section.m; sourceTree = "<group>"; };
+		CD1769F21F666A890024C550 /* MeditationInstructionSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeditationInstructionSet.h; sourceTree = "<group>"; };
+		CD1769F31F666A890024C550 /* MeditationInstructionSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeditationInstructionSet.m; sourceTree = "<group>"; };
+		CD1769F51F666B380024C550 /* YogaInstructionSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YogaInstructionSet.h; sourceTree = "<group>"; };
+		CD1769F61F666B380024C550 /* YogaInstructionSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YogaInstructionSet.m; sourceTree = "<group>"; };
+		CD1769F81F666BF40024C550 /* BudoInstructionSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BudoInstructionSet.h; sourceTree = "<group>"; };
+		CD1769F91F666BF40024C550 /* BudoInstructionSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BudoInstructionSet.m; sourceTree = "<group>"; };
+		CD1769FB1F666C210024C550 /* EndingInstructionSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EndingInstructionSet.h; sourceTree = "<group>"; };
+		CD1769FC1F666C210024C550 /* EndingInstructionSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EndingInstructionSet.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD1767371F6614900024C550 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD17689E1F6615770024C550 /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD1767311F6614900024C550 = {
+			isa = PBXGroup;
+			children = (
+				CD17673C1F6614900024C550 /* Bootykon */,
+				CD17673B1F6614900024C550 /* Products */,
+				CD17689C1F6615770024C550 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CD17673B1F6614900024C550 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD17673A1F6614900024C550 /* Bootykon.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD17673C1F6614900024C550 /* Bootykon */ = {
+			isa = PBXGroup;
+			children = (
+				CD1769E21F66162A0024C550 /* Audio */,
+				CD1767531F6614FF0024C550 /* JukeBox.m */,
+				CD1767541F6614FF0024C550 /* JukeBox.h */,
+				CD1767F91F6614FF0024C550 /* bootykon_background.jpg */,
+				CD1767FA1F6614FF0024C550 /* bootykon.icns */,
+				CD17673D1F6614900024C550 /* AppDelegate.h */,
+				CD17673E1F6614900024C550 /* AppDelegate.m */,
+				CD1767431F6614900024C550 /* ViewController.h */,
+				CD1767441F6614900024C550 /* ViewController.m */,
+				CD1767461F6614900024C550 /* Assets.xcassets */,
+				CD1767481F6614900024C550 /* Main.storyboard */,
+				CD17674B1F6614900024C550 /* Info.plist */,
+				CD1767401F6614900024C550 /* Supporting Files */,
+				CD1769E41F6621B90024C550 /* InstructionSet.h */,
+				CD1769E51F6621B90024C550 /* InstructionSet.m */,
+				CD1769EF1F6668F10024C550 /* Section.h */,
+				CD1769F01F6668F10024C550 /* Section.m */,
+				CD1769E71F6621D70024C550 /* MusicInstructionSet.h */,
+				CD1769E81F6621D70024C550 /* MusicInstructionSet.m */,
+				CD1769EA1F6621EA0024C550 /* CountingInstructionSet.h */,
+				CD1769EB1F6621EA0024C550 /* CountingInstructionSet.m */,
+				CD1769F21F666A890024C550 /* MeditationInstructionSet.h */,
+				CD1769F31F666A890024C550 /* MeditationInstructionSet.m */,
+				CD1769F51F666B380024C550 /* YogaInstructionSet.h */,
+				CD1769F61F666B380024C550 /* YogaInstructionSet.m */,
+				CD1769FB1F666C210024C550 /* EndingInstructionSet.h */,
+				CD1769FC1F666C210024C550 /* EndingInstructionSet.m */,
+				CD1769F81F666BF40024C550 /* BudoInstructionSet.h */,
+				CD1769F91F666BF40024C550 /* BudoInstructionSet.m */,
+			);
+			path = Bootykon;
+			sourceTree = "<group>";
+		};
+		CD1767401F6614900024C550 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CD1767411F6614900024C550 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CD17689C1F6615770024C550 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD17689D1F6615770024C550 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD1767391F6614900024C550 /* Bootykon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD17674E1F6614900024C550 /* Build configuration list for PBXNativeTarget "Bootykon" */;
+			buildPhases = (
+				CD1767361F6614900024C550 /* Sources */,
+				CD1767371F6614900024C550 /* Frameworks */,
+				CD1767381F6614900024C550 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bootykon;
+			productName = Bootykon;
+			productReference = CD17673A1F6614900024C550 /* Bootykon.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD1767321F6614900024C550 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Collinator Studios";
+				TargetAttributes = {
+					CD1767391F6614900024C550 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 9N7336H85T;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CD1767351F6614900024C550 /* Build configuration list for PBXProject "Bootykon" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD1767311F6614900024C550;
+			productRefGroup = CD17673B1F6614900024C550 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD1767391F6614900024C550 /* Bootykon */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD1767381F6614900024C550 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD17689B1F6614FF0024C550 /* bootykon.icns in Resources */,
+				CD1769E31F66162A0024C550 /* Audio in Resources */,
+				CD17689A1F6614FF0024C550 /* bootykon_background.jpg in Resources */,
+				CD1767471F6614900024C550 /* Assets.xcassets in Resources */,
+				CD17674A1F6614900024C550 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD1767361F6614900024C550 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD1769EC1F6621EA0024C550 /* CountingInstructionSet.m in Sources */,
+				CD1769FA1F666BF40024C550 /* BudoInstructionSet.m in Sources */,
+				CD1769F71F666B380024C550 /* YogaInstructionSet.m in Sources */,
+				CD1769F11F6668F10024C550 /* Section.m in Sources */,
+				CD1769F41F666A890024C550 /* MeditationInstructionSet.m in Sources */,
+				CD1767451F6614900024C550 /* ViewController.m in Sources */,
+				CD1769E91F6621D70024C550 /* MusicInstructionSet.m in Sources */,
+				CD1767421F6614900024C550 /* main.m in Sources */,
+				CD1769FD1F666C210024C550 /* EndingInstructionSet.m in Sources */,
+				CD17673F1F6614900024C550 /* AppDelegate.m in Sources */,
+				CD1767FC1F6614FF0024C550 /* JukeBox.m in Sources */,
+				CD1769E61F6621B90024C550 /* InstructionSet.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CD1767481F6614900024C550 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD1767491F6614900024C550 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CD17674C1F6614900024C550 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		CD17674D1F6614900024C550 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		CD17674F1F6614900024C550 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9N7336H85T;
+				INFOPLIST_FILE = Bootykon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.collinatorstudios.Bootykon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CD1767501F6614900024C550 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9N7336H85T;
+				INFOPLIST_FILE = Bootykon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.collinatorstudios.Bootykon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD1767351F6614900024C550 /* Build configuration list for PBXProject "Bootykon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD17674C1F6614900024C550 /* Debug */,
+				CD17674D1F6614900024C550 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD17674E1F6614900024C550 /* Build configuration list for PBXNativeTarget "Bootykon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD17674F1F6614900024C550 /* Debug */,
+				CD1767501F6614900024C550 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD1767321F6614900024C550 /* Project object */;
+}
