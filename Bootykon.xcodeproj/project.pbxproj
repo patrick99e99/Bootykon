@@ -14,17 +14,18 @@
 		CD17674A1F6614900024C550 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1767481F6614900024C550 /* Main.storyboard */; };
 		CD1767FC1F6614FF0024C550 /* JukeBox.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1767531F6614FF0024C550 /* JukeBox.m */; };
 		CD17689A1F6614FF0024C550 /* bootykon_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD1767F91F6614FF0024C550 /* bootykon_background.jpg */; };
-		CD17689B1F6614FF0024C550 /* bootykon.icns in Resources */ = {isa = PBXBuildFile; fileRef = CD1767FA1F6614FF0024C550 /* bootykon.icns */; };
+		CD17689B1F6614FF0024C550 /* bootykon-icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = CD1767FA1F6614FF0024C550 /* bootykon-icon.icns */; };
 		CD17689E1F6615770024C550 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD17689D1F6615770024C550 /* AVFoundation.framework */; };
 		CD1769E31F66162A0024C550 /* Audio in Resources */ = {isa = PBXBuildFile; fileRef = CD1769E21F66162A0024C550 /* Audio */; };
-		CD1769E61F6621B90024C550 /* InstructionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1769E51F6621B90024C550 /* InstructionSet.m */; };
-		CD1769E91F6621D70024C550 /* MusicInstructionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1769E81F6621D70024C550 /* MusicInstructionSet.m */; };
-		CD1769EC1F6621EA0024C550 /* CountingInstructionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1769EB1F6621EA0024C550 /* CountingInstructionSet.m */; };
-		CD1769F11F6668F10024C550 /* Section.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1769F01F6668F10024C550 /* Section.m */; };
+		CD1769F11F6668F10024C550 /* MasterControlProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1769F01F6668F10024C550 /* MasterControlProgram.m */; };
 		CD1769F41F666A890024C550 /* MeditationInstructionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1769F31F666A890024C550 /* MeditationInstructionSet.m */; };
 		CD1769F71F666B380024C550 /* YogaInstructionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1769F61F666B380024C550 /* YogaInstructionSet.m */; };
 		CD1769FA1F666BF40024C550 /* BudoInstructionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1769F91F666BF40024C550 /* BudoInstructionSet.m */; };
-		CD1769FD1F666C210024C550 /* EndingInstructionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1769FC1F666C210024C550 /* EndingInstructionSet.m */; };
+		CD1769FD1F666C210024C550 /* EndingMeditationInstructionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1769FC1F666C210024C550 /* EndingMeditationInstructionSet.m */; };
+		CD176A001F6720290024C550 /* Instruction.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1769FF1F6720290024C550 /* Instruction.m */; };
+		CDDCCFDA1F67886A00980C23 /* Dialog.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDCCFD91F67886A00980C23 /* Dialog.m */; };
+		CDDCCFE41F67A40600980C23 /* BootykonView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDCCFE31F67A40600980C23 /* BootykonView.m */; };
+		CDF66CCD1F67BFCF00B0F4F6 /* bootykon.png in Resources */ = {isa = PBXBuildFile; fileRef = CDF66CCC1F67BFCF00B0F4F6 /* bootykon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,25 +41,28 @@
 		CD1767531F6614FF0024C550 /* JukeBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JukeBox.m; sourceTree = "<group>"; };
 		CD1767541F6614FF0024C550 /* JukeBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JukeBox.h; sourceTree = "<group>"; };
 		CD1767F91F6614FF0024C550 /* bootykon_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bootykon_background.jpg; sourceTree = "<group>"; };
-		CD1767FA1F6614FF0024C550 /* bootykon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = bootykon.icns; sourceTree = "<group>"; };
+		CD1767FA1F6614FF0024C550 /* bootykon-icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "bootykon-icon.icns"; sourceTree = "<group>"; };
 		CD17689D1F6615770024C550 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		CD1769E21F66162A0024C550 /* Audio */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Audio; sourceTree = "<group>"; };
-		CD1769E41F6621B90024C550 /* InstructionSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstructionSet.h; sourceTree = "<group>"; };
-		CD1769E51F6621B90024C550 /* InstructionSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstructionSet.m; sourceTree = "<group>"; };
-		CD1769E71F6621D70024C550 /* MusicInstructionSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicInstructionSet.h; sourceTree = "<group>"; };
-		CD1769E81F6621D70024C550 /* MusicInstructionSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicInstructionSet.m; sourceTree = "<group>"; };
-		CD1769EA1F6621EA0024C550 /* CountingInstructionSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountingInstructionSet.h; sourceTree = "<group>"; };
-		CD1769EB1F6621EA0024C550 /* CountingInstructionSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountingInstructionSet.m; sourceTree = "<group>"; };
-		CD1769EF1F6668F10024C550 /* Section.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Section.h; sourceTree = "<group>"; };
-		CD1769F01F6668F10024C550 /* Section.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Section.m; sourceTree = "<group>"; };
+		CD1769EF1F6668F10024C550 /* MasterControlProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterControlProgram.h; sourceTree = "<group>"; };
+		CD1769F01F6668F10024C550 /* MasterControlProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterControlProgram.m; sourceTree = "<group>"; };
 		CD1769F21F666A890024C550 /* MeditationInstructionSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeditationInstructionSet.h; sourceTree = "<group>"; };
 		CD1769F31F666A890024C550 /* MeditationInstructionSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeditationInstructionSet.m; sourceTree = "<group>"; };
 		CD1769F51F666B380024C550 /* YogaInstructionSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YogaInstructionSet.h; sourceTree = "<group>"; };
 		CD1769F61F666B380024C550 /* YogaInstructionSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YogaInstructionSet.m; sourceTree = "<group>"; };
 		CD1769F81F666BF40024C550 /* BudoInstructionSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BudoInstructionSet.h; sourceTree = "<group>"; };
 		CD1769F91F666BF40024C550 /* BudoInstructionSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BudoInstructionSet.m; sourceTree = "<group>"; };
-		CD1769FB1F666C210024C550 /* EndingInstructionSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EndingInstructionSet.h; sourceTree = "<group>"; };
-		CD1769FC1F666C210024C550 /* EndingInstructionSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EndingInstructionSet.m; sourceTree = "<group>"; };
+		CD1769FB1F666C210024C550 /* EndingMeditationInstructionSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EndingMeditationInstructionSet.h; sourceTree = "<group>"; };
+		CD1769FC1F666C210024C550 /* EndingMeditationInstructionSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EndingMeditationInstructionSet.m; sourceTree = "<group>"; };
+		CD1769FE1F6720290024C550 /* Instruction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Instruction.h; sourceTree = "<group>"; };
+		CD1769FF1F6720290024C550 /* Instruction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Instruction.m; sourceTree = "<group>"; };
+		CDDCCFD61F67833600980C23 /* CompletableDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompletableDelegate.h; sourceTree = "<group>"; };
+		CDDCCFD81F67886A00980C23 /* Dialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dialog.h; sourceTree = "<group>"; };
+		CDDCCFD91F67886A00980C23 /* Dialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dialog.m; sourceTree = "<group>"; };
+		CDDCCFDB1F678C7700980C23 /* McpDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = McpDelegate.h; sourceTree = "<group>"; };
+		CDDCCFE21F67A40600980C23 /* BootykonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BootykonView.h; sourceTree = "<group>"; };
+		CDDCCFE31F67A40600980C23 /* BootykonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BootykonView.m; sourceTree = "<group>"; };
+		CDF66CCC1F67BFCF00B0F4F6 /* bootykon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bootykon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,35 +97,27 @@
 		CD17673C1F6614900024C550 /* Bootykon */ = {
 			isa = PBXGroup;
 			children = (
-				CD1769E21F66162A0024C550 /* Audio */,
-				CD1767531F6614FF0024C550 /* JukeBox.m */,
-				CD1767541F6614FF0024C550 /* JukeBox.h */,
-				CD1767F91F6614FF0024C550 /* bootykon_background.jpg */,
-				CD1767FA1F6614FF0024C550 /* bootykon.icns */,
 				CD17673D1F6614900024C550 /* AppDelegate.h */,
 				CD17673E1F6614900024C550 /* AppDelegate.m */,
+				CD1767461F6614900024C550 /* Assets.xcassets */,
+				CD1769E21F66162A0024C550 /* Audio */,
+				CDDCCFDD1F6796BE00980C23 /* AudioPlayers */,
+				CD1767F91F6614FF0024C550 /* bootykon_background.jpg */,
+				CD1767FA1F6614FF0024C550 /* bootykon-icon.icns */,
+				CDDCCFE21F67A40600980C23 /* BootykonView.h */,
+				CDDCCFE31F67A40600980C23 /* BootykonView.m */,
+				CD17674B1F6614900024C550 /* Info.plist */,
+				CD1769FE1F6720290024C550 /* Instruction.h */,
+				CD1769FF1F6720290024C550 /* Instruction.m */,
+				CDDCCFDC1F6796A200980C23 /* InstructionSets */,
+				CD1767481F6614900024C550 /* Main.storyboard */,
+				CDF66CCC1F67BFCF00B0F4F6 /* bootykon.png */,
+				CD1769EF1F6668F10024C550 /* MasterControlProgram.h */,
+				CD1769F01F6668F10024C550 /* MasterControlProgram.m */,
+				CDDCCFD51F67832000980C23 /* Protocols */,
+				CD1767401F6614900024C550 /* Supporting Files */,
 				CD1767431F6614900024C550 /* ViewController.h */,
 				CD1767441F6614900024C550 /* ViewController.m */,
-				CD1767461F6614900024C550 /* Assets.xcassets */,
-				CD1767481F6614900024C550 /* Main.storyboard */,
-				CD17674B1F6614900024C550 /* Info.plist */,
-				CD1767401F6614900024C550 /* Supporting Files */,
-				CD1769E41F6621B90024C550 /* InstructionSet.h */,
-				CD1769E51F6621B90024C550 /* InstructionSet.m */,
-				CD1769EF1F6668F10024C550 /* Section.h */,
-				CD1769F01F6668F10024C550 /* Section.m */,
-				CD1769E71F6621D70024C550 /* MusicInstructionSet.h */,
-				CD1769E81F6621D70024C550 /* MusicInstructionSet.m */,
-				CD1769EA1F6621EA0024C550 /* CountingInstructionSet.h */,
-				CD1769EB1F6621EA0024C550 /* CountingInstructionSet.m */,
-				CD1769F21F666A890024C550 /* MeditationInstructionSet.h */,
-				CD1769F31F666A890024C550 /* MeditationInstructionSet.m */,
-				CD1769F51F666B380024C550 /* YogaInstructionSet.h */,
-				CD1769F61F666B380024C550 /* YogaInstructionSet.m */,
-				CD1769FB1F666C210024C550 /* EndingInstructionSet.h */,
-				CD1769FC1F666C210024C550 /* EndingInstructionSet.m */,
-				CD1769F81F666BF40024C550 /* BudoInstructionSet.h */,
-				CD1769F91F666BF40024C550 /* BudoInstructionSet.m */,
 			);
 			path = Bootykon;
 			sourceTree = "<group>";
@@ -140,6 +136,41 @@
 				CD17689D1F6615770024C550 /* AVFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CDDCCFD51F67832000980C23 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CDDCCFD61F67833600980C23 /* CompletableDelegate.h */,
+				CDDCCFDB1F678C7700980C23 /* McpDelegate.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		CDDCCFDC1F6796A200980C23 /* InstructionSets */ = {
+			isa = PBXGroup;
+			children = (
+				CD1769F81F666BF40024C550 /* BudoInstructionSet.h */,
+				CD1769F91F666BF40024C550 /* BudoInstructionSet.m */,
+				CD1769FB1F666C210024C550 /* EndingMeditationInstructionSet.h */,
+				CD1769FC1F666C210024C550 /* EndingMeditationInstructionSet.m */,
+				CD1769F21F666A890024C550 /* MeditationInstructionSet.h */,
+				CD1769F31F666A890024C550 /* MeditationInstructionSet.m */,
+				CD1769F51F666B380024C550 /* YogaInstructionSet.h */,
+				CD1769F61F666B380024C550 /* YogaInstructionSet.m */,
+			);
+			name = InstructionSets;
+			sourceTree = "<group>";
+		};
+		CDDCCFDD1F6796BE00980C23 /* AudioPlayers */ = {
+			isa = PBXGroup;
+			children = (
+				CD1767531F6614FF0024C550 /* JukeBox.m */,
+				CD1767541F6614FF0024C550 /* JukeBox.h */,
+				CDDCCFD81F67886A00980C23 /* Dialog.h */,
+				CDDCCFD91F67886A00980C23 /* Dialog.m */,
+			);
+			name = AudioPlayers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,7 +232,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD17689B1F6614FF0024C550 /* bootykon.icns in Resources */,
+				CDF66CCD1F67BFCF00B0F4F6 /* bootykon.png in Resources */,
+				CD17689B1F6614FF0024C550 /* bootykon-icon.icns in Resources */,
 				CD1769E31F66162A0024C550 /* Audio in Resources */,
 				CD17689A1F6614FF0024C550 /* bootykon_background.jpg in Resources */,
 				CD1767471F6614900024C550 /* Assets.xcassets in Resources */,
@@ -216,18 +248,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD1769EC1F6621EA0024C550 /* CountingInstructionSet.m in Sources */,
 				CD1769FA1F666BF40024C550 /* BudoInstructionSet.m in Sources */,
 				CD1769F71F666B380024C550 /* YogaInstructionSet.m in Sources */,
-				CD1769F11F6668F10024C550 /* Section.m in Sources */,
+				CD1769F11F6668F10024C550 /* MasterControlProgram.m in Sources */,
 				CD1769F41F666A890024C550 /* MeditationInstructionSet.m in Sources */,
 				CD1767451F6614900024C550 /* ViewController.m in Sources */,
-				CD1769E91F6621D70024C550 /* MusicInstructionSet.m in Sources */,
 				CD1767421F6614900024C550 /* main.m in Sources */,
-				CD1769FD1F666C210024C550 /* EndingInstructionSet.m in Sources */,
+				CD1769FD1F666C210024C550 /* EndingMeditationInstructionSet.m in Sources */,
 				CD17673F1F6614900024C550 /* AppDelegate.m in Sources */,
+				CDDCCFDA1F67886A00980C23 /* Dialog.m in Sources */,
+				CDDCCFE41F67A40600980C23 /* BootykonView.m in Sources */,
+				CD176A001F6720290024C550 /* Instruction.m in Sources */,
 				CD1767FC1F6614FF0024C550 /* JukeBox.m in Sources */,
-				CD1769E61F6621B90024C550 /* InstructionSet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +411,7 @@
 				CD1767501F6614900024C550 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

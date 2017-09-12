@@ -1,5 +1,7 @@
-#import "InstructionSet.h"
+#import <Foundation/Foundation.h>
 
-@interface YogaInstructionSet : InstructionSet
+@interface YogaInstructionSet : NSObject
+
++(NSArray *)instructions;
 
 @end

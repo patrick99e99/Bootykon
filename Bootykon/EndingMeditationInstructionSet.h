@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 
-@interface MeditationInstructionSet : NSObject
+@interface EndingMeditationInstructionSet : NSObject
 
 +(NSArray *)instructions;
 

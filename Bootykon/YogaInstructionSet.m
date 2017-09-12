@@ -1,30 +1,90 @@
 #import "YogaInstructionSet.h"
+#import "Instruction.h"
 
 @implementation YogaInstructionSet
 
--(NSString *)path {
-    return @"Audio/Dialog";
-}
-
--(NSArray *)instructions {
++(NSArray *)instructions {
     return @[
-             @"s1",
-             @"s2",
-             @"s3",
-             @"s4",
-             @"s5",
-             @"s6",
-             @"s7",
-             @"s8",
-             @"s9",
-             @"s10",
-             @"s11",
-             @"s12",
-             @"s13",
-             @"s14",
-             @"s15",
-             @"s16",
-            ];
+                [Instruction playMusicGenre:YOGA],
+                [Instruction setDialogPath:@"Audio/Dialog/Yoga"],
+                [Instruction delay:10],
+                [Instruction choices:@[
+                                       [Instruction dialog:@"catcow-1"],
+                                       [Instruction dialog:@"catcow-2"],
+                                     ]],
+                [Instruction delay:30],
+                [Instruction choices:@[
+                    [Instruction dialog:@"plank-1"],
+                    [Instruction dialog:@"plank-2"],
+                    [Instruction dialog:@"plank-3"],
+                    [Instruction dialog:@"plank-4"],
+                ]],
+                [Instruction delay:20],
+                [Instruction dialog:@"downdog"],
+                [Instruction delay:60],
+                [Instruction choices:@[
+                    @[
+                        [Instruction dialog:@"vinyasa-1"],
+                        [Instruction delay:10],
+                        [Instruction dialog:@"vinyasa-1-continued"],
+                    ],
+                    @[
+                        [Instruction dialog:@"vinyasa-2"],
+                        [Instruction delay:10],
+                        [Instruction dialog:@"vinyasa-2-continued"],
+                    ],
+                ]],
+                [Instruction delay:60],
+                [Instruction choices:@[
+                    [Instruction dialog:@"rollingknee"],
+                    @[
+                        [Instruction dialog:@"tabletop"],
+                        [Instruction delay:10],
+                        [Instruction choices:@[
+                            [Instruction dialog:@"tabletop-continued-1"],
+                            [Instruction dialog:@"tabletop-continued-2"],
+                        ]],
+                    ],
+                ]],
+                [Instruction delay:10],
+                [Instruction dialog:@"rollingwave"],
+                [Instruction delay:180],
+                [Instruction dialog:@"rollinglunges"],
+                [Instruction delay:180],
+                [Instruction dialog:@"floatinglunges"],
+                [Instruction delay:60],
+                [Instruction choices:@[
+                    [Instruction dialog:@"backbend"],
+                    [Instruction dialog:@"prayertwist"],
+                ]],
+                [Instruction delay:15],
+                [Instruction dialog:@"forwardbend"],
+                [Instruction delay:15],
+                [Instruction choices:@[
+                    [Instruction dialog:@"tree"],
+                    [Instruction dialog:@"chair"],
+                    [Instruction dialog:@"warriorthree"],
+                ]],
+                [Instruction delay:10],
+                [Instruction dialog:@"floatingfrog"],
+                [Instruction delay:180],
+                [Instruction dialog:@"dancingdog"],
+                [Instruction delay:180],
+                [Instruction choices:@[
+                    [Instruction dialog:@"exaltedwarrior"],
+                    [Instruction dialog:@"highblocklowblock"],
+                ]],
+                [Instruction delay:15],
+                [Instruction choices:@[
+                    [Instruction dialog:@"floatingbrazilians"],
+                    @[
+                        [Instruction dialog:@"kungfustretches"],
+                        [Instruction delay:15],
+                        [Instruction dialog:@"kungfustretches-continued"],
+                    ]
+                ]],
+                [Instruction fadeOutMusic],
+    ];
 }
 
 @end

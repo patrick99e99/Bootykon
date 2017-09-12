@@ -1,5 +1,7 @@
-#import "InstructionSet.h"
+#import <Foundation/Foundation.h>
 
-@interface BudoInstructionSet : InstructionSet
+@interface BudoInstructionSet : NSObject
+
++(NSArray *)instructions;
 
 @end

@@ -1,15 +1,10 @@
-//
-//  ViewController.h
-//  Bootykon
-//
-//  Created by Patrick Collins on 9/10/17.
-//  Copyright © 2017 Collinator Studios. All rights reserved.
-//
-
 #import <Cocoa/Cocoa.h>
+#import "McpDelegate.h"
 
-@interface ViewController : NSViewController
-- (IBAction)button:(id)sender;
+@interface ViewController : NSViewController <McpDelegate>
+
+@property (weak) IBOutlet NSTextField *musicStatus;
+@property (weak) IBOutlet NSTextField *dialogStatus;
 
 @end
 
