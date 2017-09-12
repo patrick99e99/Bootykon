@@ -111,14 +111,17 @@
     NSUInteger limit = [self.instructions count] - 1;
     Instruction *instruction;
     [self.timer invalidate];
-
-    while (self.index < limit) {
-        self.index += 1;
-        instruction = [self.instructions objectAtIndex:self.index];
+    int index = (int)self.index;
+    while (index < limit) {
+        index += 1;
+        instruction = [self.instructions objectAtIndex:index];
         bootyInstructionType instructionType = [instruction instructionType];
         if (instructionType == DELAY_INSTRUCTION || instructionType == FADE_OUT_MUSIC_INSTRUCTION || [instruction skip]) continue;
         [self executeCurrentInstruction:NO];
-        if ([instruction instructionType] == DIALOG_INSTRUCTION) break;
+        if ([instruction instructionType] == DIALOG_INSTRUCTION) {
+            self.index = index;
+            return;
+        }
     }
 }
 
