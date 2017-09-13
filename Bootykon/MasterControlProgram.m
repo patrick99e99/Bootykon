@@ -30,6 +30,7 @@
         self.delegate = delegate;
         NSMutableArray *flattened = [NSMutableArray array];
         [self flattenInstructionsFor:@[
+                                       [BudoInstructionSet instructions],
                                        [MeditationInstructionSet instructions],
                                        [YogaInstructionSet instructions],
                                        [BudoInstructionSet instructions],
@@ -50,6 +51,7 @@
     [self.dialog stop];
     [self.jukeBox stop];
     [self.timer invalidate];
+    [NSObject cancelPreviousPerformRequestsWithTarget:self];
     self.active = NO;
 }
 
@@ -111,17 +113,14 @@
     NSUInteger limit = [self.instructions count] - 1;
     Instruction *instruction;
     [self.timer invalidate];
-    int index = (int)self.index;
-    while (index < limit) {
-        index += 1;
-        instruction = [self.instructions objectAtIndex:index];
+
+    while (self.index < limit) {
+        self.index += 1;
+        instruction = [self.instructions objectAtIndex:self.index];
         bootyInstructionType instructionType = [instruction instructionType];
         if (instructionType == DELAY_INSTRUCTION || instructionType == FADE_OUT_MUSIC_INSTRUCTION || [instruction skip]) continue;
         [self executeCurrentInstruction:NO];
-        if ([instruction instructionType] == DIALOG_INSTRUCTION) {
-            self.index = index;
-            return;
-        }
+        if (instructionType == DIALOG_INSTRUCTION) break;
     }
 }
 
@@ -135,38 +134,53 @@
 }
 
 -(void)executeCurrentInstruction:(BOOL)autoAdvance {
-    if (self.index >= [self.instructions count]) return;
+    if (self.index >= [self.instructions count]) {
+        [self.delegate didFinishProgram];
+        return;
+    }
     Instruction *instruction = [self.instructions objectAtIndex:self.index];
     
     switch ([instruction instructionType]) {
-        case MUSIC_INSTRUCTION:
+        case MUSIC_INSTRUCTION: {
             [self.jukeBox setGenre:[instruction genre]];
             [self playJukeBox];
             if (autoAdvance) [self executeNextInstruction];
             break;
-        case DELAY_INSTRUCTION:
-            self.delay = (int)[instruction numberOfSeconds];
-            self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0f
-                                                          target:self
-                                                        selector:@selector(timerDidTick)
-                                                        userInfo:nil
-                                                         repeats:YES];
+        }
+        case DELAY_INSTRUCTION: {
+            NSTimeInterval delay = [instruction delay];
+            [self performSelector:@selector(completeDelay)
+                       withObject:nil
+                       afterDelay:delay];
+            if (delay > 2.0f) {
+                self.delay = (int)delay + 1;
+                [self timerDidTick];
+                self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0f
+                                                              target:self
+                                                            selector:@selector(timerDidTick)
+                                                            userInfo:nil
+                                                             repeats:YES];
+            }
             break;
-        case DIALOG_INSTRUCTION:
+        }
+        case DIALOG_INSTRUCTION: {
             [self.dialog stop];
             self.dialog = [[Dialog alloc] initWithDelegate:self];
-            [self.delegate shouldUpdateDialogStatus:[NSString stringWithFormat:@"Nathan is speaking: %@", [instruction fileName]]];
+            [self.delegate shouldUpdateDialogStatus:[NSString stringWithFormat:@"Sensei Nathan is speaking: \"%@\"", [instruction fileName]]];
             [self.dialog speak:[instruction fileName] path:self.dialogPath];
             break;
-        case SET_DIALOG_PATH_INSTRUCTION:
+        }
+        case SET_DIALOG_PATH_INSTRUCTION: {
             [self.delegate shouldUpdateDialogStatus:[NSString stringWithFormat:@"Setting dialog path to %@", [instruction dialogPath]]];
             self.dialogPath = [instruction dialogPath];
             if (autoAdvance) [self executeNextInstruction];
             break;
-        case FADE_OUT_MUSIC_INSTRUCTION:
+        }
+        case FADE_OUT_MUSIC_INSTRUCTION: {
             [self.delegate shouldUpdateMusicStatus:[NSString stringWithFormat:@"Fading out music"]];
             [self.jukeBox fadeOut];
             break;
+        }
         default:
             NSLog(@"unknown instruction!");
             break;
@@ -180,18 +194,21 @@
 
 -(JukeBox *)jukeBox {
     if (!_jukeBox) {
-        _jukeBox = [[JukeBox alloc] initWithVolume:0.3f delegate:self];
+        _jukeBox = [[JukeBox alloc] initWithVolume:0.33f delegate:self];
     }
     return _jukeBox;
 }
 
+-(void)completeDelay {
+    [self.timer invalidate];
+    self.timer = nil;
+    self.delay = 0;
+    [self executeNextInstruction];
+}
+
 -(void)timerDidTick {
     self.delay -= 1;
-    [self.delegate shouldUpdateDialogStatus:[NSString stringWithFormat:@"Delaying for %i...", self.delay]];
-    if (self.delay <= 0) {
-        [self.timer invalidate];
-        [self executeNextInstruction];
-    }
+    [self.delegate shouldUpdateDialogStatus:[NSString stringWithFormat:@"Delaying for %i", (int)self.delay]];
 }
 
 # pragma mark - CompletableDelegate

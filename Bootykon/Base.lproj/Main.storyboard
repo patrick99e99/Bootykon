@@ -749,8 +749,11 @@
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="GWE-YM-3ZF" id="5GA-WC-P74"/>
                         <outlet property="dialogStatus" destination="JK3-om-c1a" id="C6j-43-62X"/>
                         <outlet property="musicStatus" destination="y3L-QZ-C5v" id="gim-O8-RSW"/>
+                        <outlet property="nextButton" destination="wND-8f-FJs" id="Qds-KO-b9K"/>
+                        <outlet property="startButton" destination="bvD-3p-IrB" id="GEm-ZC-e2j"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

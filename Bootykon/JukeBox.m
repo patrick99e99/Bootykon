@@ -27,7 +27,15 @@
     _genre = genre;
     [self.player stop];
     self.fileList = [self fetchFileList];
-    [self chooseRandomTrack];
+    if (genre == YOGA) {
+        if (arc4random_uniform(2)) {
+            self.index = 22;
+        } else {
+            self.index = 1;
+        }
+    } else {
+        [self chooseRandomTrack];
+    }
 }
 
 -(BOOL)isPlaying {

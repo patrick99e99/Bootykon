@@ -3,7 +3,8 @@
 @interface Instruction ()
 
 @property (nonatomic) bootyInstructionType instructionType;
-@property (nonatomic) NSUInteger numberOfSeconds;
+@property (nonatomic) NSTimeInterval minDelay;
+@property (nonatomic) NSTimeInterval maxDelay;
 @property (nonatomic, copy) NSString *fileName;
 @property (nonatomic, copy) NSString *dialogPath;
 @property (nonatomic) bootyGenre genre;
@@ -19,9 +20,14 @@
     return instruction;
 }
 
-+(instancetype)delay:(NSUInteger)seconds {
++(instancetype)delay:(NSTimeInterval)delay {
+    return [self delayWithMin:delay max:delay];
+}
+
++(instancetype)delayWithMin:(NSTimeInterval)min max:(NSTimeInterval)max {
     Instruction *instruction = [[Instruction alloc] initWithInstructionType:DELAY_INSTRUCTION];
-    instruction.numberOfSeconds = seconds;
+    instruction.minDelay = min;
+    instruction.maxDelay = max;
     return instruction;
 }
 
@@ -56,6 +62,10 @@
         self.instructionType = instructionType;
     }
     return self;
+}
+
+-(NSTimeInterval)delay {
+    return self.minDelay + ((self.maxDelay - self.minDelay) * arc4random_uniform(11) * 0.1f);
 }
 
 @end

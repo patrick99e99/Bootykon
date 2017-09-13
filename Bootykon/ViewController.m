@@ -11,21 +11,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.backButton.hidden = YES;
+    self.nextButton.hidden = YES;
 }
 
 - (void)setRepresentedObject:(id)representedObject {
     [super setRepresentedObject:representedObject];
 }
 
-- (IBAction)didTapStart:(NSButton *)sender {
+- (IBAction)didTapStart:(id)sender {
     if ([self.mcp isActive]) {
-        [self.mcp stop];
-        sender.title = @"Start";
-        self.musicStatus.stringValue = @"";
-        self.dialogStatus.stringValue = @"";
+        [self stop];
     } else {
-        sender.title = @"Stop";
-        [self.mcp start];
+        [self start];
     }
 }
 
@@ -44,6 +42,22 @@
     return _mcp;
 }
 
+-(void)stop {
+    [self.mcp stop];
+    self.startButton.title = @"Start";
+    self.musicStatus.stringValue = @"";
+    self.dialogStatus.stringValue = @"";
+    self.backButton.hidden = YES;
+    self.nextButton.hidden = YES;
+}
+
+-(void)start {
+    self.startButton.title = @"Stop";
+    [self.mcp start];
+    self.backButton.hidden = NO;
+    self.nextButton.hidden = NO;
+}
+
 # pragma mark - McpDelegate
 
 -(void)shouldUpdateDialogStatus:(NSString *)status {
@@ -54,6 +68,10 @@
 -(void)shouldUpdateMusicStatus:(NSString *)status {
     if (!status) status = @"";
     self.musicStatus.stringValue = status;
+}
+
+-(void)didFinishProgram {
+    [self stop];
 }
 
 @end

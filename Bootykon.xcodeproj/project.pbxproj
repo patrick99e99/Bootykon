@@ -13,8 +13,6 @@
 		CD1767471F6614900024C550 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD1767461F6614900024C550 /* Assets.xcassets */; };
 		CD17674A1F6614900024C550 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1767481F6614900024C550 /* Main.storyboard */; };
 		CD1767FC1F6614FF0024C550 /* JukeBox.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1767531F6614FF0024C550 /* JukeBox.m */; };
-		CD17689A1F6614FF0024C550 /* bootykon_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD1767F91F6614FF0024C550 /* bootykon_background.jpg */; };
-		CD17689B1F6614FF0024C550 /* bootykon-icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = CD1767FA1F6614FF0024C550 /* bootykon-icon.icns */; };
 		CD17689E1F6615770024C550 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD17689D1F6615770024C550 /* AVFoundation.framework */; };
 		CD1769E31F66162A0024C550 /* Audio in Resources */ = {isa = PBXBuildFile; fileRef = CD1769E21F66162A0024C550 /* Audio */; };
 		CD1769F11F6668F10024C550 /* MasterControlProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1769F01F6668F10024C550 /* MasterControlProgram.m */; };
@@ -23,6 +21,7 @@
 		CD1769FA1F666BF40024C550 /* BudoInstructionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1769F91F666BF40024C550 /* BudoInstructionSet.m */; };
 		CD1769FD1F666C210024C550 /* EndingMeditationInstructionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1769FC1F666C210024C550 /* EndingMeditationInstructionSet.m */; };
 		CD176A001F6720290024C550 /* Instruction.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1769FF1F6720290024C550 /* Instruction.m */; };
+		CD4C4A731F68E35000F9F797 /* bootykon-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CD4C4A721F68E35000F9F797 /* bootykon-icon.png */; };
 		CDDCCFDA1F67886A00980C23 /* Dialog.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDCCFD91F67886A00980C23 /* Dialog.m */; };
 		CDDCCFE41F67A40600980C23 /* BootykonView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDCCFE31F67A40600980C23 /* BootykonView.m */; };
 		CDF66CCD1F67BFCF00B0F4F6 /* bootykon.png in Resources */ = {isa = PBXBuildFile; fileRef = CDF66CCC1F67BFCF00B0F4F6 /* bootykon.png */; };
@@ -40,8 +39,6 @@
 		CD17674B1F6614900024C550 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD1767531F6614FF0024C550 /* JukeBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JukeBox.m; sourceTree = "<group>"; };
 		CD1767541F6614FF0024C550 /* JukeBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JukeBox.h; sourceTree = "<group>"; };
-		CD1767F91F6614FF0024C550 /* bootykon_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bootykon_background.jpg; sourceTree = "<group>"; };
-		CD1767FA1F6614FF0024C550 /* bootykon-icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "bootykon-icon.icns"; sourceTree = "<group>"; };
 		CD17689D1F6615770024C550 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		CD1769E21F66162A0024C550 /* Audio */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Audio; sourceTree = "<group>"; };
 		CD1769EF1F6668F10024C550 /* MasterControlProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterControlProgram.h; sourceTree = "<group>"; };
@@ -56,6 +53,7 @@
 		CD1769FC1F666C210024C550 /* EndingMeditationInstructionSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EndingMeditationInstructionSet.m; sourceTree = "<group>"; };
 		CD1769FE1F6720290024C550 /* Instruction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Instruction.h; sourceTree = "<group>"; };
 		CD1769FF1F6720290024C550 /* Instruction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Instruction.m; sourceTree = "<group>"; };
+		CD4C4A721F68E35000F9F797 /* bootykon-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bootykon-icon.png"; sourceTree = "<group>"; };
 		CDDCCFD61F67833600980C23 /* CompletableDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompletableDelegate.h; sourceTree = "<group>"; };
 		CDDCCFD81F67886A00980C23 /* Dialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dialog.h; sourceTree = "<group>"; };
 		CDDCCFD91F67886A00980C23 /* Dialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dialog.m; sourceTree = "<group>"; };
@@ -97,13 +95,12 @@
 		CD17673C1F6614900024C550 /* Bootykon */ = {
 			isa = PBXGroup;
 			children = (
+				CD4C4A721F68E35000F9F797 /* bootykon-icon.png */,
 				CD17673D1F6614900024C550 /* AppDelegate.h */,
 				CD17673E1F6614900024C550 /* AppDelegate.m */,
 				CD1767461F6614900024C550 /* Assets.xcassets */,
 				CD1769E21F66162A0024C550 /* Audio */,
 				CDDCCFDD1F6796BE00980C23 /* AudioPlayers */,
-				CD1767F91F6614FF0024C550 /* bootykon_background.jpg */,
-				CD1767FA1F6614FF0024C550 /* bootykon-icon.icns */,
 				CDDCCFE21F67A40600980C23 /* BootykonView.h */,
 				CDDCCFE31F67A40600980C23 /* BootykonView.m */,
 				CD17674B1F6614900024C550 /* Info.plist */,
@@ -232,10 +229,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD4C4A731F68E35000F9F797 /* bootykon-icon.png in Resources */,
 				CDF66CCD1F67BFCF00B0F4F6 /* bootykon.png in Resources */,
-				CD17689B1F6614FF0024C550 /* bootykon-icon.icns in Resources */,
 				CD1769E31F66162A0024C550 /* Audio in Resources */,
-				CD17689A1F6614FF0024C550 /* bootykon_background.jpg in Resources */,
 				CD1767471F6614900024C550 /* Assets.xcassets in Resources */,
 				CD17674A1F6614900024C550 /* Main.storyboard in Resources */,
 			);

@@ -13,7 +13,8 @@ typedef NS_ENUM(NSUInteger, bootyInstructionType) {
 @interface Instruction : NSObject
 
 +(instancetype)playMusicGenre:(bootyGenre)genre;
-+(instancetype)delay:(NSUInteger)seconds;
++(instancetype)delay:(NSTimeInterval)delay;
++(instancetype)delayWithMin:(NSTimeInterval)min max:(NSTimeInterval)max;
 +(instancetype)setDialogPath:(NSString *)path;
 +(instancetype)dialog:(NSString *)fileName;
 +(instancetype)dialog:(NSString *)fileName skip:(BOOL)skip;
@@ -25,7 +26,7 @@ typedef NS_ENUM(NSUInteger, bootyInstructionType) {
 @property (nonatomic, weak) Instruction *previous;
 
 -(bootyInstructionType)instructionType;
--(NSUInteger)numberOfSeconds;
+-(NSTimeInterval)delay;
 -(NSString *)fileName;
 -(NSString *)dialogPath;
 -(bootyGenre)genre;
