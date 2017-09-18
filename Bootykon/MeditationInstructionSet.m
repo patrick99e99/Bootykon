@@ -14,7 +14,7 @@
         [Instruction dialog:@"intro-3"],
         [Instruction dialog:@"intro-4"],
     ]],
-    [Instruction delay:10],
+    [Instruction delay:5],
     [Instruction fadeOutMusic],
   ];
 }

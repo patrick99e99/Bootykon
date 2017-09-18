@@ -7,7 +7,7 @@
     return @[
              [Instruction playMusicGenre:BUDO],
              [Instruction setDialogPath:@"Audio/Dialog/Budo"],
-             [Instruction delay:5],
+             [Instruction delay:2],
              [Instruction choices:@[
                  @[
                      [Instruction dialog:@"pivotpunches"],
