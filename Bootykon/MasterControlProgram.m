@@ -32,14 +32,6 @@
 -(instancetype)initWithDelegate:(id<McpDelegate>)delegate {
     if (self = [super init]) {
         self.delegate = delegate;
-        NSMutableArray *flattened = [NSMutableArray array];
-        [self flattenInstructionsFor:@[
-                                       [MeditationInstructionSet instructions],
-                                       [YogaInstructionSet instructions],
-                                       [BudoInstructionSet instructions],
-                                       [EndingMeditationInstructionSet instructions],
-                                       ] flattenedInstructions:flattened];
-        self.instructions = [flattened copy];
     }
     return self;
 }
@@ -47,6 +39,14 @@
 -(void)start {
     self.active = YES;
     self.index = 0;
+    NSMutableArray *flattened = [NSMutableArray array];
+    [self flattenInstructionsFor:@[
+                                   [MeditationInstructionSet instructions],
+                                   [YogaInstructionSet instructions],
+                                   [BudoInstructionSet instructions],
+                                   [EndingMeditationInstructionSet instructions],
+                                   ] flattenedInstructions:flattened];
+    self.instructions = [flattened copy];
     [self executeCurrentInstruction];
 }
 
