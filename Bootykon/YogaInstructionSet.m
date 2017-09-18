@@ -81,8 +81,10 @@
                 ]],
                 [Instruction delay:15],
                 [Instruction choices:@[
-                    [Instruction dialog:@"floatingbrazilians"],
-                    [Instruction delay:15],
+                    @[
+                        [Instruction dialog:@"floatingbrazilians"],
+                        [Instruction delay:15],
+                    ],
                     @[
                         [Instruction dialog:@"kungfustretches"],
                         [Instruction delay:15],
