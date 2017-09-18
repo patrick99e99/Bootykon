@@ -71,7 +71,7 @@
 }
 
 -(void)decrementVolume {
-    self.player.volume -= 0.01f;
+    self.player.volume -= 0.005f;
     if (self.player.volume <= 0.0f) {
         self.player.volume = 0.0f;
         self.fading = NO;
