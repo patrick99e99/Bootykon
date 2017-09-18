@@ -43,7 +43,7 @@
 }
 
 -(void)audioPlayerDecodeErrorDidOccur:(AVAudioPlayer *)player error:(NSError * __nullable)error {
-    NSLog(@"error! %@ ", [error description]);
+    NSLog(@"error! %@", [error description]);
 }
 
 @end

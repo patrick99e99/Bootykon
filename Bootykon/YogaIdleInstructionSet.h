@@ -1,8 +1,9 @@
 #import <Foundation/Foundation.h>
+@class Instruction;
 
-@interface IdleInstructionSet : NSObject
+@interface YogaIdleInstructionSet : NSObject
 
-+(NSString *)dialogPath;
-+(NSArray *)instructions;
++(NSString *)path;
++(Instruction *)instruction;
 
 @end

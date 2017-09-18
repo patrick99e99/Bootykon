@@ -4,6 +4,7 @@
 #import "YogaInstructionSet.h"
 #import "BudoInstructionSet.h"
 #import "EndingMeditationInstructionSet.h"
+#import "YogaIdleInstructionSet.h"
 #import "Instruction.h"
 #import "Dialog.h"
 #import "McpDelegate.h"
@@ -15,11 +16,14 @@
 @property (nonatomic, strong) NSArray *instructions;
 @property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic) int delay;
+@property (nonatomic) int totalDelay;
 @property (nonatomic) NSUInteger index;
 @property (nonatomic, copy) NSString *dialogPath;
 @property (nonatomic, copy) NSString *status;
 @property (nonatomic, weak) id<McpDelegate> delegate;
 @property (nonatomic, getter=isActive) BOOL active;
+@property (nonatomic) BOOL displayDelay;
+@property (nonatomic, getter=isSpeakingIdle) BOOL speakingIdle;
 
 @end
 
@@ -30,7 +34,6 @@
         self.delegate = delegate;
         NSMutableArray *flattened = [NSMutableArray array];
         [self flattenInstructionsFor:@[
-                                       [BudoInstructionSet instructions],
                                        [MeditationInstructionSet instructions],
                                        [YogaInstructionSet instructions],
                                        [BudoInstructionSet instructions],
@@ -50,8 +53,7 @@
 -(void)stop {
     [self.dialog stop];
     [self.jukeBox stop];
-    [self.timer invalidate];
-    [NSObject cancelPreviousPerformRequestsWithTarget:self];
+    [self resetTimer];
     self.active = NO;
 }
 
@@ -67,7 +69,7 @@
 
 -(void)previous {
     if (self.index <= 1) return;
-    [self.timer invalidate];
+    [self resetTimer];
     Instruction *instruction;
     NSUInteger index = self.index;
     int targetIndex = -1;
@@ -112,7 +114,7 @@
 -(void)next {
     NSUInteger limit = [self.instructions count] - 1;
     Instruction *instruction;
-    [self.timer invalidate];
+    [self resetTimer];
 
     while (self.index < limit) {
         self.index += 1;
@@ -134,6 +136,8 @@
 }
 
 -(void)executeCurrentInstruction:(BOOL)autoAdvance {
+    [self resetTimer];
+
     if (self.index >= [self.instructions count]) {
         [self.delegate didFinishProgram];
         return;
@@ -149,25 +153,19 @@
         }
         case DELAY_INSTRUCTION: {
             NSTimeInterval delay = [instruction delay];
-            [self performSelector:@selector(completeDelay)
-                       withObject:nil
-                       afterDelay:delay];
-            if (delay > 2.0f) {
-                self.delay = (int)delay + 1;
-                [self timerDidTick];
-                self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0f
-                                                              target:self
-                                                            selector:@selector(timerDidTick)
-                                                            userInfo:nil
-                                                             repeats:YES];
-            }
+            self.displayDelay = delay > 2;
+            self.totalDelay = delay;
+            self.delay = (int)delay + 1;
+            [self timerDidTick];
+            self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0f
+                                                          target:self
+                                                        selector:@selector(timerDidTick)
+                                                        userInfo:nil
+                                                         repeats:YES];
             break;
         }
         case DIALOG_INSTRUCTION: {
-            [self.dialog stop];
-            self.dialog = [[Dialog alloc] initWithDelegate:self];
-            [self.delegate shouldUpdateDialogStatus:[NSString stringWithFormat:@"Sensei Nathan is speaking: \"%@\"", [instruction fileName]]];
-            [self.dialog speak:[instruction fileName] path:self.dialogPath];
+            [self speak:instruction path:self.dialogPath];
             break;
         }
         case SET_DIALOG_PATH_INSTRUCTION: {
@@ -187,6 +185,14 @@
     }
 }
 
+-(void)speak:(Instruction *)instruction path:(NSString *)path {
+    [self.dialog stop];
+
+    self.dialog = [[Dialog alloc] initWithDelegate:self];
+    [self.delegate shouldUpdateDialogStatus:[NSString stringWithFormat:@"Sensei Nathan is speaking: \"%@\"", [instruction fileName]]];
+    [self.dialog speak:[instruction fileName] path:path];
+}
+
 -(void)executeNextInstruction {
     self.index += 1;
     [self executeCurrentInstruction];
@@ -194,27 +200,64 @@
 
 -(JukeBox *)jukeBox {
     if (!_jukeBox) {
-        _jukeBox = [[JukeBox alloc] initWithVolume:0.33f delegate:self];
+        _jukeBox = [[JukeBox alloc] initWithVolume:0.3f delegate:self];
     }
     return _jukeBox;
 }
 
 -(void)completeDelay {
+    [self resetTimer];
+    [self.delegate shouldUpdateDialogStatus:@""];
+    [self executeNextInstruction];
+}
+
+-(void)resetTimer {
     [self.timer invalidate];
     self.timer = nil;
     self.delay = 0;
-    [self executeNextInstruction];
 }
 
 -(void)timerDidTick {
     self.delay -= 1;
-    [self.delegate shouldUpdateDialogStatus:[NSString stringWithFormat:@"Delaying for %i", (int)self.delay]];
+    if (self.isSpeakingIdle) return;
+
+    if (self.delay <= 0) {
+        [self completeDelay];
+        return;
+    }
+
+    if ([self shouldSpeakIdle]) {
+        [self speakIdle];
+    } else if (self.displayDelay) {
+        [self.delegate shouldUpdateDialogStatus:[NSString stringWithFormat:@"Delaying for %i", (int)self.delay]];
+    }
+}
+
+-(BOOL)shouldSpeakIdle {
+    if (self.jukeBox.genre != YOGA || self.delay < 20 || arc4random_uniform(2)) return NO;
+
+    int quarter      = (int)(self.totalDelay / 4.0f);
+    int half         = (int)(self.totalDelay / 2.0f);
+    int threeQuarter = half + quarter;
+
+    return self.delay == quarter || self.delay == half || self.delay == threeQuarter;
+}
+
+-(void)speakIdle {
+    Instruction *instruction = [YogaIdleInstructionSet instruction];
+    [self speak:instruction path:[YogaIdleInstructionSet path]];
+    self.speakingIdle = YES;
 }
 
 # pragma mark - CompletableDelegate
 
 -(void)didComplete {
-    [self executeNextInstruction];
+    if (self.isSpeakingIdle) {
+        self.speakingIdle = NO;
+        if (self.delay <= 0) [self completeDelay];
+    } else {
+        [self executeNextInstruction];
+    }
 }
 
 @end

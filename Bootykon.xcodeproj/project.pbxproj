@@ -22,6 +22,7 @@
 		CD1769FD1F666C210024C550 /* EndingMeditationInstructionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1769FC1F666C210024C550 /* EndingMeditationInstructionSet.m */; };
 		CD176A001F6720290024C550 /* Instruction.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1769FF1F6720290024C550 /* Instruction.m */; };
 		CD4C4A731F68E35000F9F797 /* bootykon-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CD4C4A721F68E35000F9F797 /* bootykon-icon.png */; };
+		CD95B2021F6E13C400B2C511 /* YogaIdleInstructionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CD95B2011F6E13C400B2C511 /* YogaIdleInstructionSet.m */; };
 		CDDCCFDA1F67886A00980C23 /* Dialog.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDCCFD91F67886A00980C23 /* Dialog.m */; };
 		CDDCCFE41F67A40600980C23 /* BootykonView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDCCFE31F67A40600980C23 /* BootykonView.m */; };
 		CDF66CCD1F67BFCF00B0F4F6 /* bootykon.png in Resources */ = {isa = PBXBuildFile; fileRef = CDF66CCC1F67BFCF00B0F4F6 /* bootykon.png */; };
@@ -54,6 +55,8 @@
 		CD1769FE1F6720290024C550 /* Instruction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Instruction.h; sourceTree = "<group>"; };
 		CD1769FF1F6720290024C550 /* Instruction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Instruction.m; sourceTree = "<group>"; };
 		CD4C4A721F68E35000F9F797 /* bootykon-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bootykon-icon.png"; sourceTree = "<group>"; };
+		CD95B2001F6E13C400B2C511 /* YogaIdleInstructionSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YogaIdleInstructionSet.h; sourceTree = "<group>"; };
+		CD95B2011F6E13C400B2C511 /* YogaIdleInstructionSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YogaIdleInstructionSet.m; sourceTree = "<group>"; };
 		CDDCCFD61F67833600980C23 /* CompletableDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompletableDelegate.h; sourceTree = "<group>"; };
 		CDDCCFD81F67886A00980C23 /* Dialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dialog.h; sourceTree = "<group>"; };
 		CDDCCFD91F67886A00980C23 /* Dialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dialog.m; sourceTree = "<group>"; };
@@ -155,6 +158,8 @@
 				CD1769F31F666A890024C550 /* MeditationInstructionSet.m */,
 				CD1769F51F666B380024C550 /* YogaInstructionSet.h */,
 				CD1769F61F666B380024C550 /* YogaInstructionSet.m */,
+				CD95B2001F6E13C400B2C511 /* YogaIdleInstructionSet.h */,
+				CD95B2011F6E13C400B2C511 /* YogaIdleInstructionSet.m */,
 			);
 			name = InstructionSets;
 			sourceTree = "<group>";
@@ -162,8 +167,8 @@
 		CDDCCFDD1F6796BE00980C23 /* AudioPlayers */ = {
 			isa = PBXGroup;
 			children = (
-				CD1767531F6614FF0024C550 /* JukeBox.m */,
 				CD1767541F6614FF0024C550 /* JukeBox.h */,
+				CD1767531F6614FF0024C550 /* JukeBox.m */,
 				CDDCCFD81F67886A00980C23 /* Dialog.h */,
 				CDDCCFD91F67886A00980C23 /* Dialog.m */,
 			);
@@ -252,6 +257,7 @@
 				CD1767421F6614900024C550 /* main.m in Sources */,
 				CD1769FD1F666C210024C550 /* EndingMeditationInstructionSet.m in Sources */,
 				CD17673F1F6614900024C550 /* AppDelegate.m in Sources */,
+				CD95B2021F6E13C400B2C511 /* YogaIdleInstructionSet.m in Sources */,
 				CDDCCFDA1F67886A00980C23 /* Dialog.m in Sources */,
 				CDDCCFE41F67A40600980C23 /* BootykonView.m in Sources */,
 				CD176A001F6720290024C550 /* Instruction.m in Sources */,
@@ -370,6 +376,7 @@
 				DEVELOPMENT_TEAM = 9N7336H85T;
 				INFOPLIST_FILE = Bootykon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.collinatorstudios.Bootykon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -383,6 +390,7 @@
 				DEVELOPMENT_TEAM = 9N7336H85T;
 				INFOPLIST_FILE = Bootykon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.collinatorstudios.Bootykon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
